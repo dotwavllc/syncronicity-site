@@ -48,6 +48,19 @@
 <link rel="stylesheet" href="/assets/migration.css">
 <script src="/assets/migration.js" defer></script>
 <style>.gallery-masonry-item-wrapper { opacity: 1 !important; transform: none !important; }</style>
+<style>
+.gallery-grid-item-wrapper,.gallery-masonry-item-wrapper,.sqs-html-content { transition:opacity 700ms ease; }
+.gallery-grid-item-wrapper.site-reveal-pending,.gallery-masonry-item-wrapper.site-reveal-pending,.sqs-html-content.site-reveal-pending { opacity:0 !important; }
+@media (prefers-reduced-motion: reduce) { .gallery-grid-item-wrapper,.gallery-masonry-item-wrapper,.sqs-html-content { transition:none; } }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+ if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+ const targets=document.querySelectorAll('.gallery-grid-item-wrapper,.gallery-masonry-item-wrapper,.sqs-html-content');
+ const observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.remove('site-reveal-pending');observer.unobserve(entry.target);}});},{threshold:0.05});
+ targets.forEach(function(target){target.classList.add('site-reveal-pending');observer.observe(target);});
+});
+</script>
 </head>
 
   <body
