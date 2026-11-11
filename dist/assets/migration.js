@@ -25,4 +25,16 @@
     img.src = source.currentSrc || source.src || source.dataset.src; img.alt = source.alt; dialog.showModal(); close.focus();
   }));
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && !menu.hidden) toggleMenu(false); });
+
+  // The static export keeps lazy placeholders without Squarespace's image loader.
+  if (document.body.classList.contains('homepage')) {
+    const hydrateImages = () => document.querySelectorAll('img[data-src]').forEach(image => {
+      const source = image.dataset.src || image.dataset.image;
+      if (!source) return;
+      image.loading = 'eager';
+      if (!image.complete || image.naturalWidth === 0) image.src = source;
+    });
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', hydrateImages, { once: true });
+    else hydrateImages();
+  }
 })();
