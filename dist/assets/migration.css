@@ -1,3 +1,4 @@
+@import url("https://use.typekit.net/leb3nny.css");
 .migration-menu[hidden]{display:none!important}
 .migration-menu{position:fixed;inset:88px 0 0;z-index:9998;background:#111;color:#fff;overflow:auto;padding:2rem}
 .migration-menu a{color:#fff;font:1.4rem/2.4 Arial,sans-serif;text-decoration:none}
@@ -25,3 +26,5 @@ body{--body-font-font-family:Arial,sans-serif!important;--meta-font-font-family:
 @media screen and (max-width:767px){
   .homepage .gallery-grid--layout-grid .gallery-grid-wrapper{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+
+body{--body-font-font-family:pragmatica,Arial,sans-serif!important;--meta-font-font-family:pragmatica,Arial,sans-serif!important;--navigation-font-font-family:pragmatica,Arial,sans-serif!important}
