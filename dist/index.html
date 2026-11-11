@@ -65,8 +65,9 @@
 .site-marquee { width:100%; overflow:hidden; }
 .site-marquee-track { display:flex; width:max-content; animation:site-marquee-scroll 45s linear infinite !important; }
 .site-marquee-group { display:flex; flex:none; align-items:center; gap:2.5rem; padding-right:2.5rem; white-space:nowrap; }
-.site-marquee-group span { font-family:"Helvetica Neue",Arial,sans-serif; font-size:1.5rem; font-weight:400; letter-spacing:-0.03em; line-height:1.4; }
+.site-marquee-group span { font-family:"Helvetica Neue",Arial,sans-serif; font-size:min(calc(0.006 * 100vw + 1rem), max(calc(0.006 * var(--maxPageWidth, 1500px) + 1rem), 1.5rem)); font-weight:400; letter-spacing:-0.03em; line-height:1.4; }
 .site-marquee[data-direction="right"] .site-marquee-track { animation-direction:reverse !important; }
+@media screen and (max-width:767px) and (orientation:portrait) { .site-marquee-group span { font-size:calc(0.006 * min(100vh, 900px) + 1rem); } }
 @keyframes site-marquee-scroll { to { transform:translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .site-marquee-track { animation:none !important; } }
 </style>
