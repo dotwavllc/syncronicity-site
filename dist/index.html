@@ -66,7 +66,7 @@
 .site-marquee-track { display:flex; width:max-content; animation:site-marquee-scroll 45s linear infinite !important; }
 .site-marquee-group { display:flex; flex:none; align-items:center; gap:2.5rem; padding-right:2.5rem; white-space:nowrap; }
 .site-marquee-group span { font-size:clamp(1.25rem,2.5vw,2.5rem); line-height:1.35; }
-.site-marquee[data-direction="right"] .site-marquee-track { animation-direction:reverse; }
+.site-marquee[data-direction="right"] .site-marquee-track { animation-direction:reverse !important; }
 @keyframes site-marquee-scroll { to { transform:translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .site-marquee-track { animation:none !important; } }
 </style>
