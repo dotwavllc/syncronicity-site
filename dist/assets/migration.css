@@ -10,3 +10,18 @@
 
 .migration-menu a{display:block;opacity:1!important;visibility:visible!important;transform:none!important}
 body{--body-font-font-family:Arial,sans-serif!important;--meta-font-font-family:Arial,sans-serif!important;--navigation-font-font-family:Arial,sans-serif!important}
+
+/* Keep the migrated homepage gallery aligned with the live Squarespace layout. */
+.homepage .gallery-grid--layout-grid .gallery-grid-wrapper{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:0;row-gap:0}
+.homepage .gallery-grid-item-wrapper{position:relative;display:block;width:100%;height:0}
+.homepage .gallery-grid-item img{position:absolute;display:block;inset:0;width:100%;height:100%}
+.homepage .gallery-grid[data-aspect-ratio="square"] .gallery-grid-item-wrapper{padding-bottom:100%}
+.homepage .gallery-grid[data-aspect-ratio="standard"] .gallery-grid-item-wrapper{padding-bottom:66.666%}
+.homepage .gallery-grid[data-aspect-ratio="standard-vertical"] .gallery-grid-item-wrapper{padding-bottom:150%}
+.homepage .gallery-grid[data-aspect-ratio="four-three"] .gallery-grid-item-wrapper{padding-bottom:75%}
+.homepage .gallery-grid[data-aspect-ratio="three-four-vertical"] .gallery-grid-item-wrapper{padding-bottom:133.333%}
+.homepage .gallery-grid[data-aspect-ratio="widescreen"] .gallery-grid-item-wrapper{padding-bottom:56.25%}
+.homepage .gallery-grid[data-aspect-ratio="anamorphic-widescreen"] .gallery-grid-item-wrapper,.homepage .gallery-grid[data-aspect-ratio="ultra-widescreen"] .gallery-grid-item-wrapper{padding-bottom:41.666%}
+@media screen and (max-width:767px){
+  .homepage .gallery-grid--layout-grid .gallery-grid-wrapper{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
