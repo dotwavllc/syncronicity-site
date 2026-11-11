@@ -59,6 +59,31 @@
 <link rel="stylesheet" href="/assets/components/4f3eee0b6750.css">
 <link rel="stylesheet" href="/assets/migration.css">
 <script src="/assets/migration.js" defer></script>
+<style>
+/* Restore content previously revealed by Squarespace's visitor scripts. */
+.gallery-grid-item-wrapper { opacity: 1 !important; transform: none !important; }
+.site-marquee { width:100%; overflow:hidden; }
+.site-marquee-track { display:flex; width:max-content; animation:site-marquee-scroll 45s linear infinite; }
+.site-marquee-group { display:flex; flex:none; align-items:center; gap:2.5rem; padding-right:2.5rem; white-space:nowrap; }
+.site-marquee-group span { font-size:clamp(1.25rem,2.5vw,2.5rem); line-height:1.35; }
+.site-marquee[data-direction="right"] .site-marquee-track { animation-direction:reverse; }
+@keyframes site-marquee-scroll { to { transform:translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .site-marquee-track { animation:none; } }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+ document.querySelectorAll('.Marquee[data-marquee-items]').forEach(function (marquee) {
+  let items; try { items = JSON.parse(marquee.dataset.marqueeItems); } catch (_) { return; }
+  if (!items.length) return;
+  const box=document.createElement('div'); box.className='site-marquee'; box.dataset.direction=marquee.dataset.animationDirection || 'left';
+  const track=document.createElement('div'); track.className='site-marquee-track';
+  const group=document.createElement('div'); group.className='site-marquee-group';
+  items.forEach(function(item){const span=document.createElement('span'); span.textContent=item.text; group.appendChild(span);});
+  const copy=group.cloneNode(true); copy.setAttribute('aria-hidden','true');
+  track.append(group,copy); box.appendChild(track); marquee.replaceWith(box);
+ });
+});
+</script>
 </head>
 
   <body
