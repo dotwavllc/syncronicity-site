@@ -1,3 +1,4 @@
+@import url("https://use.typekit.net/leb3nny.css");
 .migration-menu[hidden]{display:none!important}
 .migration-menu{position:fixed;inset:88px 0 0;z-index:9998;background:#111;color:#fff;overflow:auto;padding:2rem}
 .migration-menu a{color:#fff;font:1.4rem/2.4 Arial,sans-serif;text-decoration:none}
@@ -24,4 +25,23 @@ body{--body-font-font-family:Arial,sans-serif!important;--meta-font-font-family:
 .homepage .gallery-grid[data-aspect-ratio="anamorphic-widescreen"] .gallery-grid-item-wrapper,.homepage .gallery-grid[data-aspect-ratio="ultra-widescreen"] .gallery-grid-item-wrapper{padding-bottom:41.666%}
 @media screen and (max-width:767px){
   .homepage .gallery-grid--layout-grid .gallery-grid-wrapper{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+body{--body-font-font-family:pragmatica,Arial,sans-serif!important;--meta-font-font-family:pragmatica,Arial,sans-serif!important;--navigation-font-font-family:pragmatica,Arial,sans-serif!important}
+
+/* Keep the homepage service labels and their descriptions in separate columns. */
+@media (min-width:768px){
+ .homepage .fe-block-34fd5163815790c6676a{grid-column:3 / 10 !important}
+ .homepage .fe-block-2de6b0ffacfa9819bea7{grid-column:3 / 10 !important}
+ .homepage .fe-block-34fd5163815790c6676a .sqs-html-content,
+ .homepage .fe-block-2de6b0ffacfa9819bea7 .sqs-html-content{overflow-wrap:anywhere}
+ .homepage .fe-block-ee8358622954d84a3d4e{grid-row:28 / 35 !important}
+ .homepage .fe-block-e7bae957464a34475193{grid-row:35 / 38 !important}
+}
+/* Give long article navigation titles room to wrap on small screens. */
+@media (max-width:767px){
+ .item-pagination--prev-next{flex-direction:column;gap:1.5rem}
+ .item-pagination--prev-next .item-pagination-link{width:100%;max-width:100%;min-width:0}
+ .item-pagination--prev-next .pagination-title-wrapper{min-width:0;overflow-wrap:anywhere}
+ .item-pagination--prev-next .item-pagination-icon{flex-shrink:0}
 }

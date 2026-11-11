@@ -59,6 +59,51 @@
 <link rel="stylesheet" href="/assets/components/4f3eee0b6750.css">
 <link rel="stylesheet" href="/assets/migration.css">
 <script src="/assets/migration.js" defer></script>
+<style>
+/* Restore content previously revealed by Squarespace's visitor scripts. */
+.gallery-grid-item-wrapper { opacity: 1 !important; transform: none !important; }
+.site-marquee { width:100%; overflow:hidden; }
+.site-marquee-track { display:flex; width:max-content; animation:site-marquee-scroll 45s linear infinite !important; }
+.site-marquee-group { display:flex; flex:none; align-items:center; gap:2.5rem; padding-right:2.5rem; white-space:nowrap; }
+.site-marquee-group span { font-size:clamp(1.25rem,2.5vw,2.5rem); line-height:1.35; }
+.site-marquee[data-direction="right"] .site-marquee-track { animation-direction:reverse !important; }
+@keyframes site-marquee-scroll { to { transform:translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .site-marquee-track { animation:none !important; } }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+ document.querySelectorAll('.Marquee[data-marquee-items]').forEach(function (marquee) {
+  let items; try { items = JSON.parse(marquee.dataset.marqueeItems); } catch (_) { return; }
+  if (!items.length) return;
+  const box=document.createElement('div'); box.className='site-marquee'; box.dataset.direction=marquee.dataset.animationDirection || 'left';
+  const track=document.createElement('div'); track.className='site-marquee-track';
+  const group=document.createElement('div'); group.className='site-marquee-group';
+  items.forEach(function(item){const span=document.createElement('span'); span.textContent=item.text; group.appendChild(span);});
+  const copy=group.cloneNode(true); copy.setAttribute('aria-hidden','true');
+  track.append(group,copy); box.appendChild(track); marquee.replaceWith(box);
+ });
+});
+</script>
+<style>
+.site-reveal-target { transition:opacity 900ms linear; }
+.site-reveal-target.site-reveal-pending { opacity:0 !important; }
+@media (prefers-reduced-motion: reduce) { .site-reveal-target { transition:none; } }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+ if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+ const targets=document.querySelectorAll('.sqs-html-content :is(h1,h2,h3,h4,p), [data-animation-role="image"], [data-animation-role="button"], .gallery-grid-item-wrapper, .gallery-masonry-item-wrapper, .gallery-caption-content, .marquee-block');
+ const observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.remove('site-reveal-pending');observer.unobserve(entry.target);}});},{threshold:0.05});
+ targets.forEach(function(target){target.classList.add('site-reveal-target','site-reveal-pending');observer.observe(target);});
+});
+</script>
+<style>
+/* Keep the call to action below the preceding copy at every breakpoint. */
+.fe-block-e7bae957464a34475193 { grid-area: 36 / 2 / 39 / 8 !important; margin-top: 12px; }
+@media (min-width: 768px) {
+ .fe-block-e7bae957464a34475193 { grid-area: 34 / 15 / 37 / 21 !important; }
+}
+</style>
 </head>
 
   <body
