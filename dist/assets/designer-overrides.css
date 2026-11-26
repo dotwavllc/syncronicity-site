@@ -34,6 +34,30 @@
   margin-bottom: 0;
   padding-bottom: 6.6vw;
 }
+/* About / home "What we do": bold the linked text in the middle paragraphs */
+#block-2ae2ff5ebfaa2a7c8a50 a,
+#block-802828e09473a8bfd83b a,
+#block-82366e8161268e5ed22a a {
+  font-weight: 700;
+}
+/* Rentals/Builds "Learn more": align to the left edge of the text above it */
+@media (min-width: 768px) {
+  .fe-block-yui_3_17_2_1_1760485858324_35402 {
+    grid-area: 11/15/13/20 !important;
+  }
+  /* Studio "Rent the studio" button: nudge down to breathe */
+  .fe-block-b7eaf7d6d57af9b36c15 {
+    transform: translateY(1.5vw);
+  }
+}
+/* Studio photo (About/home): crop in 8%, anchored to the bottom-right corner */
+#block-yui_3_17_2_1_1760545116267_6693 .fluid-image-container {
+  overflow: hidden;
+}
+#block-yui_3_17_2_1_1760545116267_6693 img {
+  transform: scale(1.08);
+  transform-origin: 100% 100%;
+}
 @media (max-width: 640px) {
   .gallery-masonry[data-section-id="68ee9f2dba821852a203e931"] .gallery-masonry-wrapper {
     grid-template-columns: 1fr;
