@@ -1,104 +1,143 @@
 // Shop catalog: one object per product. type: template | asset | app | bundle. art: core | rack | app | bundle.
 const products = [
   {
+    "name": "Set Architect",
+    "type": "app",
+    "label": "Independent app",
+    "price": "$128",
+    "availability": "First release planned — not yet available",
+    "description": "Set Architect is a set-planning app for building Ableton Live sets from a session template and song stems, with routing review, stem matching and build preparation.",
+    "art": "app",
+    "format": "Independent app",
+    "compat": "Supported operating-system and Ableton Live versions to be confirmed.",
+    "included": "Start from a template, existing ALS or saved working file; review routing and matching; import song stems; check song metadata; choose build options; build and verify the resulting ALS.",
+    "delivery": "When available, access instructions will be sent by email. Release timing and download details are to be confirmed.",
+    "license": "License and activation terms will be shown before purchase. Final terms are to be confirmed."
+  },
+  {
     "name": "Core Tracks/Tune Template",
     "type": "template",
     "label": "Core template",
     "price": "$96",
+    "availability": "Draft listing — not yet available",
     "description": "A modular Ableton Live starting point for playback, music cues, stage cues, click and tuning workflows.",
     "art": "core",
     "format": "Ableton Live template",
-    "included": "Music Cue Rack, Stage Cue Rack, Click Rack and Tune Clip elements; partner additions and final package under review.",
-    "compat": "Ableton Live; final version requirements to be confirmed."
+    "compat": "Intended for Ableton Live 11.3 onward and Live 12. Final version and system requirements to be confirmed.",
+    "included": "Draft scope: a playback session template with music and vocal stem tracks, bus and output routing, band reference parts, navigation and tuning automation, plus Music Cue Rack, Stage Cue Rack, Click Rack and Tune Clip elements. Final contents to be confirmed.",
+    "delivery": "After purchase, we’ll send an email with download or access instructions. Final timing and file details will be confirmed before launch.",
+    "license": "License terms and permitted use will be shown before purchase. Final terms are to be confirmed."
   },
   {
     "name": "Stage Cue Rack",
     "type": "asset",
     "label": "Rack / asset",
     "price": "$16",
+    "availability": "Draft listing — not yet available",
     "description": "A staging cue layer for crew communication, designed around selectable voices.",
     "art": "rack",
     "format": "Ableton rack",
-    "included": "Draft scope: 112 stage cues across four voices; final contents subject to review."
+    "compat": "Intended for Ableton Live 11.3 onward and Live 12. Final version and system requirements to be confirmed.",
+    "included": "Draft scope: 112 stage cues in each of four voices, with voice and tone controls and the accompanying cue audio. Final contents to be confirmed.",
+    "delivery": "After purchase, we’ll send an email with download or access instructions. Final timing and file details will be confirmed before launch.",
+    "license": "License terms and permitted use will be shown before purchase. Final terms are to be confirmed."
   },
   {
     "name": "Music Cue Rack",
     "type": "asset",
     "label": "Rack / asset",
     "price": "$16",
+    "availability": "Draft listing — not yet available",
     "description": "Music-direction cues organized for artist and band workflows.",
     "art": "rack",
     "format": "Ableton rack",
-    "included": "Draft scope: 112 music cues in four selectable voices; final contents subject to review."
+    "compat": "Intended for Ableton Live 11.3 onward and Live 12. Final version and system requirements to be confirmed.",
+    "included": "Draft scope: 112 music cues in each of four voices, with voice selection, tone controls and the accompanying voice audio. Final contents to be confirmed.",
+    "delivery": "After purchase, we’ll send an email with download or access instructions. Final timing and file details will be confirmed before launch.",
+    "license": "License terms and permitted use will be shown before purchase. Final terms are to be confirmed."
   },
   {
     "name": "Click Rack",
     "type": "asset",
     "label": "Rack / asset",
     "price": "$16",
+    "availability": "Draft listing — not yet available",
     "description": "A reusable click and timing layer for live sessions.",
     "art": "rack",
     "format": "Ableton rack",
-    "included": "Draft scope includes click selection, tone controls and accent adjustment; final routing requires QA."
+    "compat": "Intended for Ableton Live 11.3 onward and Live 12. Final version and system requirements to be confirmed.",
+    "included": "Draft scope: selectable click sounds (WAV), tone and high-shelf controls, and separate high and low accent adjustment. Final contents to be confirmed.",
+    "delivery": "After purchase, we’ll send an email with download or access instructions. Final timing and file details will be confirmed before launch.",
+    "license": "License terms and permitted use will be shown before purchase. Final terms are to be confirmed."
   },
   {
     "name": "Tune Clip Collection",
     "type": "asset",
     "label": "Rack / asset",
     "price": "$16",
-    "description": "Prepared tuning-related clips for playback workflows; final product scope is under review.",
+    "availability": "Draft listing — not yet available",
+    "description": "Prepared tuning-related clips for playback workflows; final product scope is to be confirmed.",
     "art": "rack",
     "format": "Clip collection",
-    "included": "Draft scope includes prepared tuning clips; relationship to AutoTuna and packaging remain open."
+    "compat": "Intended for Ableton Live 11.3 onward and Live 12. Requires Auto-Tune (not included) and a configured MIDI route. Final supported versions to be confirmed.",
+    "included": "Draft scope: Ableton Live clips for automating Auto-Tune retune, key, scale, Flex-Tune, Humanize and target-note settings, with a settings reference image. Final contents to be confirmed.",
+    "delivery": "After purchase, we’ll send an email with download or access instructions. Final timing and file details will be confirmed before launch.",
+    "license": "License terms and permitted use will be shown before purchase. Final terms are to be confirmed."
   },
   {
     "name": "Bus Line Collection",
     "type": "asset",
     "label": "Rack / asset",
     "price": "$16",
+    "availability": "Draft listing — not yet available",
     "description": "A proposed standalone collection of line-count and bus-cue assets.",
     "art": "rack",
     "format": "Digital asset collection",
-    "included": "Line-count and bus-cue material; final contents and template inclusion remain under review."
-  },
-  {
-    "name": "Set Architect",
-    "type": "app",
-    "label": "Independent app",
-    "price": "$128",
-    "description": "An in-development set-planning product designed alongside the core template.",
-    "art": "app",
-    "format": "Independent app",
-    "included": "Product scope and integration are in development; features and compatibility require confirmation."
+    "compat": "To be confirmed.",
+    "included": "Planned line-count and bus-identification cues. Final contents and file formats to be confirmed.",
+    "delivery": "After purchase, we’ll send an email with download or access instructions. Final timing and file details will be confirmed before launch.",
+    "license": "License terms and permitted use will be shown before purchase. Final terms are to be confirmed."
   },
   {
     "name": "Core Tracks/Tune Template + Set Architect",
     "type": "bundle",
     "label": "Bundle",
-    "price": "$256",
+    "price": "$152",
+    "availability": "Not yet available",
     "description": "The planned core template and Set Architect bundle.",
     "art": "bundle",
     "format": "Template + app bundle",
-    "included": "Planned: core template, Set Architect, Oaktone Line Check Lite and TAZ Lite. Partner integration and delivery require confirmation."
+    "compat": "Supported operating-system and Ableton Live versions to be confirmed.",
+    "included": "Planned: Core Tracks/Tune Template, Set Architect, Oaktone Line Check Lite and Oaktone TAZ Lite. Final package to be confirmed.",
+    "delivery": "When available, access instructions will be sent by email. Release timing and delivery details are to be confirmed.",
+    "license": "Component and partner license terms will be shown before purchase. Final terms are to be confirmed."
   },
   {
     "name": "MIDI Clip Generator",
     "type": "app",
     "label": "Future concept",
     "price": "$16",
-    "description": "A potential clip-generation utility for Ableton workflows; scope and implementation are undecided.",
+    "availability": "Concept only — not available",
+    "description": "A potential clip-generation utility for Ableton workflows; its scope is still to be defined.",
     "art": "app",
     "format": "Future app concept",
-    "included": "No finished product or release is confirmed."
+    "compat": "To be confirmed.",
+    "included": "No finished product or release is confirmed.",
+    "delivery": "When available, access instructions will be sent by email. Release timing and delivery details are to be confirmed.",
+    "license": "License and activation terms will be shown before purchase. Final terms are to be confirmed."
   },
   {
     "name": "Timecode Generator",
     "type": "app",
     "label": "Future concept",
     "price": "Free",
+    "availability": "Concept only — not available",
     "description": "A potential standalone timecode tool; its features and release are not yet defined.",
     "art": "app",
     "format": "Future app concept",
-    "included": "Potential free tool; final pricing and release are not confirmed."
+    "compat": "To be confirmed.",
+    "included": "No finished product, final pricing or release is confirmed.",
+    "delivery": "When available, access instructions will be sent by email. Release timing and delivery details are to be confirmed.",
+    "license": "License and activation terms will be shown before purchase. Final terms are to be confirmed."
   }
 ];

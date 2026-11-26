@@ -109,6 +109,7 @@ nav a:not(:last-child){display:none}
 .product-facts div{border-top:1px solid #555;padding:12px 0}
 .product-facts dt{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#aaa}
 .product-facts dd{margin:5px 0 0;font-size:14px;color:#eee}
+.card p.availability{min-height:0;margin-top:8px;font-size:12px;color:#ddd}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
 }
 @media(max-width:480px){.product-facts{grid-template-columns:1fr}
@@ -166,7 +167,7 @@ p{font-family:"itc-avant-garde-gothic-pro","Syncro Avant Garde",pragmatica,"Helv
 body[data-variation="v47"] .hero{align-items:center;border-top:1px solid #777}
 body[data-variation="v47"] .section-head{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:end;border-bottom:1px solid #777;padding-bottom:25px}
 body[data-variation="v47"] .card{display:grid;grid-template-columns:minmax(120px,180px) minmax(0,1fr);column-gap:25px}
-body[data-variation="v47"] .card .art{grid-row:1 / span 4;margin:12px 0}
+body[data-variation="v47"] .card .art{grid-row:1 / span 5;margin:12px 0}
 body[data-variation="v47"] .card .art-inner{inset:8%;padding:10px}
 body[data-variation="v47"] .card .art-inner strong{font-size:18px;line-height:1.05}
 body[data-variation="v47"] .card-meta{margin-top:12px}
