@@ -32,7 +32,7 @@
 /* Studio page: extra breathing room after the FAQs section */
 [data-section-id="68ee9f49c9e838032ab9223c"] {
   margin-bottom: 0;
-  padding-bottom: 6vw;
+  padding-bottom: 12vw;
 }
 @media (max-width: 640px) {
   .gallery-masonry[data-section-id="68ee9f2dba821852a203e931"] .gallery-masonry-wrapper {
