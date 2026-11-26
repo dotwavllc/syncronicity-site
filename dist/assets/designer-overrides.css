@@ -58,6 +58,13 @@
   transform: scale(1.08);
   transform-origin: 100% 100%;
 }
+/* Main header logo: ~7% smaller on desktop and tablet (115px -> 107px) */
+@media (min-width: 768px) {
+  .header-title-logo a,
+  .header-title-logo img {
+    max-height: 107px;
+  }
+}
 @media (max-width: 640px) {
   .gallery-masonry[data-section-id="68ee9f2dba821852a203e931"] .gallery-masonry-wrapper {
     grid-template-columns: 1fr;
