@@ -1,0 +1,29 @@
+/* Studio page: show the lower gallery as a compact grid instead of one huge column */
+.gallery-masonry[data-section-id="68ee9f2dba821852a203e931"] .gallery-masonry-wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  height: auto !important;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4vw;
+}
+.gallery-masonry[data-section-id="68ee9f2dba821852a203e931"] .gallery-masonry-item {
+  position: static !important;
+  transform: none !important;
+  width: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.gallery-masonry[data-section-id="68ee9f2dba821852a203e931"] .gallery-masonry-item img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  width: 100% !important;
+  height: auto !important;
+}
+@media (max-width: 640px) {
+  .gallery-masonry[data-section-id="68ee9f2dba821852a203e931"] .gallery-masonry-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+}
