@@ -21,6 +21,14 @@
   width: 100% !important;
   height: auto !important;
 }
+/* Studio page: crop the main hero image in 10%, anchored to the bottom-right corner */
+[data-component-id="63fc3f4c0c9fd89c2525"] .fluid-image-container {
+  overflow: hidden;
+}
+[data-component-id="63fc3f4c0c9fd89c2525"] img {
+  transform: scale(1.1);
+  transform-origin: 100% 100%;
+}
 @media (max-width: 640px) {
   .gallery-masonry[data-section-id="68ee9f2dba821852a203e931"] .gallery-masonry-wrapper {
     grid-template-columns: 1fr;
