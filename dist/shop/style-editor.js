@@ -89,7 +89,7 @@
   function baseCss(v){let rules=visualRules[v.layout]||'';if(!rules)return '';rules+='.art-inner strong{overflow-wrap:anywhere;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}';let prefix='body[data-variation="'+v.id+'"] ';let css=rules.replace(/(^|})([^{}]+)\{/g,(_,end,sel)=>end+sel.split(',').map(x=>prefix+x.trim()).join(',')+'{');return css+'\n@media(max-width:1000px){'+prefix+'.hero::before{display:none}'+prefix+'.hero-content{width:100%}}\n@media(max-width:750px){'+prefix+'.hero::before{display:none}'+prefix+'.hero-content{width:100%;max-width:100%}'+prefix+'.hero{justify-content:flex-start;text-align:left}'+prefix+'.hero .actions{justify-content:flex-start}'+prefix+'.hero .intro{margin-inline:0}'+prefix+'.section-head{display:block}'+prefix+'.story .wrap{display:block}'+prefix+'.story .story-art{margin-top:30px}'+prefix+'.card{display:block}'+prefix+'.card:first-child{grid-column:auto}'+prefix+'.card:first-child .art{height:250px}'+prefix+'.card .art{margin:14px 0 18px}}';}
 
   const key='syncro-shop-style-v1';
-  let current='v01';try{const id=localStorage.getItem('syncro-shop-active-variation');if(variations.some(v=>v.id===id))current=id}catch(e){}
+  let current='v47';try{const id=localStorage.getItem('syncro-shop-active-variation');if(variations.some(v=>v.id===id))current=id}catch(e){}
   const storageKey=id=>id==='v01'?key:key+':'+id;
   const fonts=[['Avant Garde','"itc-avant-garde-gothic-pro","Syncro Avant Garde",sans-serif'],['Pragmatica','pragmatica,"Helvetica Neue",Arial,sans-serif'],['Helvetica Neue','"Helvetica Neue",Helvetica,Arial,sans-serif'],['Arial','Arial,sans-serif'],['Georgia','Georgia,serif']];
   const weights=[['Light','300'],['Demi','600'],['Bold','700']];
