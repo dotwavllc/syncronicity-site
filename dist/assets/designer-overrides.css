@@ -26,8 +26,12 @@
   overflow: hidden;
 }
 [data-component-id="63fc3f4c0c9fd89c2525"] img {
-  transform: scale(1.1);
+  transform: scale(1.14);
   transform-origin: 100% 100%;
+}
+/* Studio page: extra breathing room after the FAQs section */
+[data-section-id="68ee9f49c9e838032ab9223c"] {
+  margin-bottom: 6vw;
 }
 @media (max-width: 640px) {
   .gallery-masonry[data-section-id="68ee9f2dba821852a203e931"] .gallery-masonry-wrapper {
