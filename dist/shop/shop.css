@@ -202,12 +202,16 @@ main .card .art{height:150px !important;}
 main .card h3{font-size:22px !important;}
 
 /* Accent: yellow ochre for key buttons and highlights, always with black text */
-:root{--accent:#DDA82E}
+:root{--accent:#D2A641}
 main .filter.active,main .hero .button{background:var(--accent);border-color:var(--accent);color:#000}
 main .hero .button:hover{background:#fff;color:#000}
 #shop .eyebrow{color:var(--accent)}
-/* Full-width product photo behind the "Tools for what's next" heading; filters start below it */
+/* Full-width product photo behind the "Tools for what's next" heading, cropped to its colourful lower half */
 main #shop.section{padding-top:0 !important}
-.shop-intro{background:linear-gradient(90deg,rgba(23,23,23,.94) 0%,rgba(23,23,23,.84) 50%,rgba(23,23,23,.55) 100%),url("https://pub-d5ed5e2b96684f8ca98bd9817f6707dc.r2.dev/products/set-architect/sa-promo/sa-1x1-untitledconfigurationstemmapping.png") center 38%/cover;padding:80px 0;margin-bottom:32px}
+.shop-intro{position:relative;isolation:isolate;overflow:hidden;padding:100px 0;margin-bottom:32px}
+.shop-intro::before{content:"";position:absolute;inset:0;z-index:-2;background:url("https://pub-d5ed5e2b96684f8ca98bd9817f6707dc.r2.dev/products/set-architect/sa-promo/sa-1x1-untitledconfigurationstemmapping.png") center 88%/cover;filter:saturate(1.35) brightness(1.05)}
+.shop-intro::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(15,15,15,.78) 0%,rgba(15,15,15,.56) 45%,rgba(15,15,15,.28) 100%)}
+.shop-intro h2,.shop-intro p,.shop-intro .eyebrow{text-shadow:0 1px 14px rgba(0,0,0,.75),0 0 3px rgba(0,0,0,.5)}
 body[data-variation="v47"] .shop-intro .section-head{margin-bottom:0;border-bottom:0;padding-bottom:0}
-@media(max-width:750px){.shop-intro{background:linear-gradient(rgba(23,23,23,.86),rgba(23,23,23,.8)),url("https://pub-d5ed5e2b96684f8ca98bd9817f6707dc.r2.dev/products/set-architect/sa-promo/sa-1x1-untitledconfigurationstemmapping.png") center/cover;padding:48px 0;margin-bottom:24px}}
+.shop-intro .section-head p{color:#f5f5f5}
+@media(max-width:750px){.shop-intro{padding:64px 0;margin-bottom:24px}.shop-intro::before{background-position:75% 96%;background-size:185% auto}.shop-intro::after{background:linear-gradient(rgba(15,15,15,.66),rgba(15,15,15,.46))}}
