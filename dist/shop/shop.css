@@ -200,3 +200,12 @@ main .hero h1{font-size:74px !important;}
 }
 main .card .art{height:150px !important;}
 main .card h3{font-size:22px !important;}
+
+/* Accent: yellow ochre for key buttons and highlights, always with black text */
+:root{--accent:#C18F32}
+main .filter.active,main .hero .button{background:var(--accent);border-color:var(--accent);color:#000}
+main .hero .button:hover{background:#fff;color:#000}
+#shop .eyebrow{color:var(--accent)}
+/* Product photo as a backdrop behind the "Tools for what's next" heading and filters */
+.shop-intro{background:linear-gradient(90deg,rgba(23,23,23,.94) 0%,rgba(23,23,23,.84) 50%,rgba(23,23,23,.55) 100%),url("https://pub-d5ed5e2b96684f8ca98bd9817f6707dc.r2.dev/products/set-architect/sa-promo/sa-1x1-untitledconfigurationstemmapping.png") center 38%/cover;padding:44px 36px 8px;margin-bottom:28px}
+@media(max-width:750px){.shop-intro{background:linear-gradient(rgba(23,23,23,.86),rgba(23,23,23,.8)),url("https://pub-d5ed5e2b96684f8ca98bd9817f6707dc.r2.dev/products/set-architect/sa-promo/sa-1x1-untitledconfigurationstemmapping.png") center/cover;padding:28px 18px 1px}}
