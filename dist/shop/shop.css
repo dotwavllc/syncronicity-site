@@ -218,3 +218,10 @@ body[data-variation="v47"] .shop-intro .section-head{margin-bottom:0;border-bott
 /* Larger intro line under the shop heading */
 main .shop-intro .section-head p{font-size:21px;line-height:1.5;max-width:460px}
 @media(max-width:750px){main .shop-intro .section-head p{font-size:19px}}
+/* Heading block: shared baseline, and gaps on one 8px-based scale (16 / 32 / 64 / 96) */
+main .shop-intro{padding:96px 0;margin-bottom:32px}
+body[data-variation="v47"] .shop-intro .section-head{grid-template-columns:max-content minmax(0,460px);justify-content:start;align-items:last baseline;column-gap:64px}
+body[data-variation="v47"] .shop-intro .section-head h2{margin:16px 0 0}
+body[data-variation="v47"] .shop-intro .section-head p{margin:0}
+main #shop .filters{margin-bottom:32px}
+@media(max-width:750px){main .shop-intro{padding:64px 0}body[data-variation="v47"] .shop-intro .section-head{display:block}body[data-variation="v47"] .shop-intro .section-head p{margin-top:32px}}
