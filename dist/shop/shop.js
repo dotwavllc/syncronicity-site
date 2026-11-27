@@ -2,3 +2,22 @@
 function openProduct(p){document.querySelector('#modaltype').textContent=p.label;document.querySelector('#modaltitle').textContent=p.name;document.querySelector('#modaldesc').textContent=p.description;document.querySelector('#modalprice').textContent='Draft price '+p.price;document.querySelector('#modalformat').textContent=p.format||p.label;for(const [id,key] of [['availability','availability'],['compat','compat'],['included','included'],['delivery','delivery'],['license','license']])document.querySelector('#modal'+id).textContent=p[key]||'To be confirmed';document.querySelector('#dialog').showModal()}
 
 const grid=document.querySelector('#products');function render(filter='all'){grid.innerHTML='';products.filter(p=>filter==='all'||p.type===filter).forEach(p=>{let c=document.createElement('article');c.className='card';c.innerHTML=`<div class="art ${p.art}" aria-hidden="true"><div class="art-inner"><small>Syncronicity / Digital tools</small><strong>${p.name}</strong></div></div><div class="card-meta"><span>${p.label}</span><span>Draft ${p.price}</span></div><h3>${p.name}</h3><p>${p.description}</p><p class="availability">${p.availability}</p><button>Explore product</button>`;c.querySelector('button').addEventListener('click',()=>openProduct(p));grid.appendChild(c)})}render();document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-pressed','false')});b.classList.add('active');b.setAttribute('aria-pressed','true');render(b.dataset.filter)}));document.querySelector('.close').addEventListener('click',()=>document.querySelector('#dialog').close());
+
+// Phone menu, as on the live site
+(() => {
+  const button = document.querySelector('.burger');
+  const menu = document.querySelector('.mobile-menu');
+  if (!button || !menu) return;
+  const header = document.querySelector('.site-header');
+  function toggle(open) {
+    if (open) menu.style.top = `${Math.max(0, header.getBoundingClientRect().bottom)}px`;
+    menu.hidden = !open;
+    document.body.style.overflow = open ? 'hidden' : '';
+    button.setAttribute('aria-expanded', String(open));
+    button.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  button.addEventListener('click', () => toggle(menu.hidden));
+  menu.addEventListener('click', e => { if (e.target.closest('a')) toggle(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !menu.hidden) { toggle(false); button.focus(); } });
+  matchMedia('(min-width: 800px)').addEventListener('change', e => { if (e.matches) toggle(false); });
+})();
