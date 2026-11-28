@@ -304,7 +304,5 @@ html body :is(main h1,main h2,main h3,.modal h2,.art strong,main h2 *,main h1 *,
 html body main :is(h1,h2):not(#x):not(.modal *){font-size:clamp(32px,calc(3.2vw + 12px),60px)!important;line-height:1.06!important}
 html body main :is(h1,h2):not(#x) *{font-size:inherit!important;line-height:inherit!important}
 @media(max-width:767px){html body main :is(h1,h2):not(#x):not(.modal *){font-size:min(9vw,40px)!important;line-height:1.1!important}}
-/* H1 and H2: Pragmatica Extended Medium. */
-html body main :is(h1,h2,h1 *,h2 *):not(#x):not(.modal *){font-family:pragmatica-extended,pragmatica,sans-serif!important;font-weight:500!important}
-html body main :is(h1,h2):not(#x):not(.modal *){font-size:clamp(28px,calc(2.7vw + 10px),50px)!important}
-@media(max-width:767px){html body main :is(h1,h2):not(#x):not(.modal *){font-size:min(7.4vw,34px)!important}}
+/* H1 and H2: standard-width Pragmatica Bold. */
+html body main :is(h1,h2,h1 *,h2 *):not(#x):not(.modal *){font-family:pragmatica,"Helvetica Neue",Arial,sans-serif!important;font-weight:700!important;letter-spacing:-.015em!important}
