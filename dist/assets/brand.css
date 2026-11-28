@@ -1,0 +1,19 @@
+/* SYNCRONICITY brand type (Brand Identity Reference): ITC Avant Garde Gothic everywhere,
+   600 for headings, 300 for body, 700 for emphasis and buttons. Served weights: 100/300/600/700. */
+body,body.homepage{
+--brand-font:itc-avant-garde-gothic-pro,pragmatica,"Helvetica Neue",Arial,sans-serif;
+--heading-font-font-family:var(--brand-font)!important;--heading-font-font-weight:600!important;--heading-font-letter-spacing:-.01em!important;
+--body-font-font-family:var(--brand-font)!important;--body-font-font-weight:300!important;--body-font-letter-spacing:0em!important;
+--meta-font-font-family:var(--brand-font)!important;--meta-font-font-weight:300!important;--meta-font-letter-spacing:0em!important;
+--navigation-font-font-family:var(--brand-font)!important;--header-button-font-font-family:var(--brand-font)!important;
+font-family:var(--brand-font)!important;font-weight:300}
+body *:not([class*="icon"]):not(svg):not(svg *){font-family:var(--brand-font)!important}
+body p,body li,body .header-nav a,body .migration-menu a,body .site-marquee-group span{font-weight:300!important;letter-spacing:0!important}
+body h1,body h2,body h3,body h4{font-weight:600!important;letter-spacing:-.01em!important}
+body h1{letter-spacing:-.015em!important}
+body h1 *,body h2 *,body h3 *,body h4 *{font-weight:inherit!important;letter-spacing:inherit!important}
+body strong,body b,body p strong,body p b{font-weight:700!important}
+body .sqs-block-button-element,body button,body input[type=submit]{font-weight:700!important;letter-spacing:0!important}
+
+/* Header logo about 12% smaller than before on desktop and tablet (107px -> 94px) */
+@media (min-width:768px){body .header-title-logo a,body .header-title-logo img{max-height:94px!important}}
