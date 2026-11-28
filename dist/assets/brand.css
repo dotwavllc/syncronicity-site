@@ -33,3 +33,5 @@ html body :is(.header-nav a,.header-nav a *):not(#x){font-weight:600!important;f
 html body .sqs-block-button-element:not(#x){font-size:.9rem!important;line-height:1.3!important;padding:10px 16px!important;height:auto!important;min-height:56px!important;text-align:center!important;white-space:normal!important}
 /* Phone: stop wrapped page titles colliding. */
 @media(max-width:767px){html body h1:not(#x),html body h1 *:not(#x){line-height:1.04!important}}
+/* Bold headlines (the Home hero) carry the same weight as page titles. */
+html body :is(h2 strong,h2 b):not(#x){font-weight:600!important}
