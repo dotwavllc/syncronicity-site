@@ -271,3 +271,8 @@ main .hero h1{margin:16px 0 32px}
 .art.has-image img{display:block;width:100%;height:100%;object-fit:cover}
 .modal-image{display:block;width:100%;height:auto;margin:0 0 20px}.modal-image[hidden]{display:none}
 @media(max-width:750px){main .card .art.has-image{height:auto !important}.art.has-image img{height:auto}}
+
+/* Product copy about 1.5pt smaller; product window 40% wider */
+main .card p,main .card button,main details p,main .modal p{font-size:calc(var(--fs-normal) - 2px)}
+.modal{max-width:868px}
+.modal-image{max-height:52vh;object-fit:cover}
