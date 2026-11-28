@@ -23,18 +23,18 @@ body .sqs-block-button-element,body button,body input[type=submit]{font-weight:7
 /* Phone: stop wrapped page titles colliding (Avant Garde descenders). */
 @media(max-width:767px){html body h1:not(#x),html body h1 *:not(#x){line-height:1.04!important}}
 
-/* ===== TRIAL: Avant Garde headers, Futura 100 body (not approved; do not merge as is) ===== */
+/* ===== TRIAL: Pragmatica headers, Futura 100 body, Avant Garde capitals (not approved; do not merge as is) ===== */
 body,body.homepage{--brand-font:futura-100-latin-ext,"Futura",pragmatica,Arial,sans-serif}
 html body :is(p,li):not(#x),html body :is(p,li) :not(strong,b,strong *,b *):not(#x){font-family:futura-100-latin-ext-book,futura-100-latin-ext,"Futura",sans-serif!important;font-weight:400!important}
 html body :is(p,li):not(#x){font-size-adjust:.47;letter-spacing:.035em!important}
 html body :is(p,li) :is(strong,b):not(#x){font-weight:700!important}
-html body :is(h1,h2,h3,h4,h1 *,h2 *,h3 *,h4 *):not(#x){font-family:itc-avant-garde-gothic-pro,pragmatica,sans-serif!important;font-weight:600!important;letter-spacing:-.01em!important}
-/* Page and section titles: about 90% of the original Work title (H1), H2 a step below.
+html body :is(h1,h2,h3,h4,h1 *,h2 *,h3 *,h4 *):not(#x),html body p.sqsrte-large:not(#x),html body p.sqsrte-large *:not(#x){font-family:pragmatica,"Helvetica Neue",Arial,sans-serif!important;font-weight:400!important;letter-spacing:-.01em!important;font-size-adjust:none}
+/* Page and section titles: about 90% of the original Work title (H1), H2 much smaller.
    The scrolling artist names and the previous/next post links keep their own sizes. */
 html body h1:not(#x):not(.Marquee *){font-size:clamp(46px,calc(5.6vw + 17px),106px)!important;line-height:1.02!important;letter-spacing:-.015em!important}
-html body h2:not(#x):not(.item-pagination-title){font-size:clamp(36px,calc(4.6vw + 14px),86px)!important;line-height:1.08!important}
+html body h2:not(#x):not(.item-pagination-title){font-size:clamp(32px,calc(3.2vw + 12px),60px)!important;line-height:1.08!important}
 html body h1:not(#x):not(.Marquee *) *,html body h2:not(#x):not(.item-pagination-title) *{font-size:inherit!important;line-height:inherit!important}
-@media(max-width:767px){html body h1:not(#x):not(.Marquee *){font-size:min(12.4vw,60px)!important;line-height:1.06!important}html body h2:not(#x):not(.item-pagination-title){font-size:min(9.4vw,46px)!important;line-height:1.12!important}}
+@media(max-width:767px){html body h1:not(#x):not(.Marquee *){font-size:min(12.4vw,60px)!important;line-height:1.06!important}html body h2:not(#x):not(.item-pagination-title){font-size:min(8.2vw,38px)!important;line-height:1.12!important}}
 /* Capitals in Avant Garde. */
 html body :is(.header-nav a,.header-nav a *,.migration-menu a,.sqs-block-button-element,.sqs-block-button-element *,button,input[type=submit]):not(#x){font-family:itc-avant-garde-gothic-pro,pragmatica,sans-serif!important;text-transform:uppercase!important;letter-spacing:.07em!important}
 html body :is(.header-nav a,.header-nav a *,.migration-menu a):not(#x){font-weight:600!important}
