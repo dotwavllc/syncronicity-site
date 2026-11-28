@@ -23,22 +23,21 @@ body .sqs-block-button-element,body button,body input[type=submit]{font-weight:7
 /* Phone: stop wrapped page titles colliding (Avant Garde descenders). */
 @media(max-width:767px){html body h1:not(#x),html body h1 *:not(#x){line-height:1.04!important}}
 
-/* ===== TRIAL: Pragmatica headers, Futura 100 body, Avant Garde capitals (not approved; do not merge as is) ===== */
-body,body.homepage{--brand-font:futura-100-latin-ext,"Futura",pragmatica,Arial,sans-serif}
-html body :is(p,li):not(#x),html body :is(p,li) :not(strong,b,strong *,b *):not(#x){font-family:futura-100-latin-ext-book,futura-100-latin-ext,"Futura",sans-serif!important;font-weight:400!important}
-html body :is(p,li):not(#x){font-size-adjust:.47;letter-spacing:.035em!important}
+/* ===== TRIAL: Area site-wide, Dharma Gothic for the artist lineup (not approved; do not merge as is) ===== */
+body,body.homepage{--brand-font:area-normal,"Helvetica Neue",Arial,sans-serif}
+html body :is(p,li):not(#x){font-weight:400!important;letter-spacing:.008em!important}
 html body :is(p,li) :is(strong,b):not(#x){font-weight:700!important}
-html body :is(h1,h2,h3,h4,h1 *,h2 *,h3 *,h4 *):not(#x),html body p.sqsrte-large:not(#x),html body p.sqsrte-large *:not(#x){font-family:pragmatica,"Helvetica Neue",Arial,sans-serif!important;font-weight:400!important;letter-spacing:-.01em!important;font-size-adjust:none}
-/* Page and section titles: about 90% of the original Work title (H1), H2 much smaller.
-   The scrolling artist names and the previous/next post links keep their own sizes. */
-html body h1:not(#x):not(.Marquee *){font-size:clamp(46px,calc(5.6vw + 17px),106px)!important;line-height:1.02!important;letter-spacing:-.015em!important}
-html body h2:not(#x):not(.item-pagination-title){font-size:clamp(32px,calc(3.2vw + 12px),60px)!important;line-height:1.08!important}
+html body :is(h1,h2,h1 *,h2 *):not(#x){font-weight:700!important;letter-spacing:-.015em!important}
+html body :is(h3,h4,h3 *,h4 *):not(#x),html body p.sqsrte-large:not(#x),html body p.sqsrte-large *:not(#x){font-weight:500!important;letter-spacing:-.005em!important}
+/* Title sizes. The previous/next post links keep their own sizes. */
+html body h1:not(#x):not(.Marquee *){font-size:clamp(42px,calc(4.9vw + 15px),92px)!important;line-height:1.04!important}
+html body h2:not(#x):not(.item-pagination-title){font-size:clamp(28px,calc(2.9vw + 11px),54px)!important;line-height:1.12!important}
 html body h1:not(#x):not(.Marquee *) *,html body h2:not(#x):not(.item-pagination-title) *{font-size:inherit!important;line-height:inherit!important}
-@media(max-width:767px){html body h1:not(#x):not(.Marquee *){font-size:min(12.4vw,60px)!important;line-height:1.06!important}html body h2:not(#x):not(.item-pagination-title){font-size:min(8.2vw,38px)!important;line-height:1.12!important}}
-/* Capitals in Avant Garde. */
-html body :is(.header-nav a,.header-nav a *,.migration-menu a,.sqs-block-button-element,.sqs-block-button-element *,button,input[type=submit]):not(#x){font-family:itc-avant-garde-gothic-pro,pragmatica,sans-serif!important;text-transform:uppercase!important;letter-spacing:.07em!important}
-html body :is(.header-nav a,.header-nav a *,.migration-menu a):not(#x){font-weight:600!important}
-html body :is(.header-nav a,.header-nav a *):not(#x){font-size:.82rem!important}
-html body .sqs-block-button-element:not(#x){font-size:.9rem!important;line-height:1.3!important;padding:10px 16px!important;height:auto!important;min-height:56px!important;text-align:center!important;white-space:normal!important}
-/* H1 and H2: standard-width Pragmatica Bold. */
-html body :is(h1,h2,h1 *,h2 *):not(#x):not(.Marquee *):not(.item-pagination-title){font-family:pragmatica,"Helvetica Neue",Arial,sans-serif!important;font-weight:700!important;letter-spacing:-.015em!important}
+@media(max-width:767px){html body h1:not(#x):not(.Marquee *){font-size:min(10.4vw,52px)!important;line-height:1.08!important}html body h2:not(#x):not(.item-pagination-title){font-size:min(7.4vw,34px)!important;line-height:1.16!important}}
+/* Capitals: navigation and buttons. */
+html body :is(.header-nav a,.header-nav a *,.migration-menu a,.sqs-block-button-element,.sqs-block-button-element *,button,input[type=submit]):not(#x){text-transform:uppercase!important;letter-spacing:.07em!important;font-weight:700!important}
+html body :is(.header-nav a,.header-nav a *):not(#x){font-size:.78rem!important}
+html body .sqs-block-button-element:not(#x){font-size:.85rem!important;line-height:1.3!important;padding:10px 16px!important;height:auto!important;min-height:56px!important;text-align:center!important;white-space:normal!important}
+/* Special area: the scrolling artist lineup in condensed Dharma Gothic. */
+html body .Marquee :is(h1,h1 *,span):not(#x){font-family:dharma-gothic-c,"Arial Narrow",sans-serif!important;font-weight:800!important;text-transform:uppercase!important;letter-spacing:.02em!important}
+html body .Marquee h1:not(#x){font-size:clamp(34px,3.4vw,52px)!important;line-height:1.2!important}
