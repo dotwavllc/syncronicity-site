@@ -298,3 +298,9 @@ html body :is(.site-nav a,.mobile-menu a,.filter,.button,.textlink,.card button,
 html body :is(.site-nav a,.mobile-menu a):not(#x){font-weight:600!important}
 html body .site-nav a:not(#x){font-size:.82rem!important}
 html body :is(.filter,.button,.textlink,.card button):not(#x){font-size:.82rem!important}
+/* Avant Garde headers, wider Futura body. */
+html body :is(p,li,summary):not(#x){letter-spacing:.035em!important}
+html body :is(main h1,main h2,main h3,.modal h2,.art strong,main h2 *,main h1 *,main h2.hl-long,main h2.hl-long *):not(#x){font-family:var(--avant)!important;font-weight:600!important;letter-spacing:-.01em!important}
+html body main :is(h1,h2):not(#x):not(.modal *){font-size:clamp(36px,calc(4.6vw + 14px),86px)!important;line-height:1.06!important}
+html body main :is(h1,h2):not(#x) *{font-size:inherit!important;line-height:inherit!important}
+@media(max-width:767px){html body main :is(h1,h2):not(#x):not(.modal *){font-size:min(10.4vw,48px)!important;line-height:1.1!important}}
