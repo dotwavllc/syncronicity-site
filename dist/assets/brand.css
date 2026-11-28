@@ -29,3 +29,5 @@ html body :is(h2,h3,h4):not(#x){font-weight:500!important;letter-spacing:-.005em
 html body :is(h1,h1 *):not(#x){font-family:itc-avant-garde-gothic-pro,pragmatica,sans-serif!important;font-weight:600!important}
 html body :is(.header-nav a,.header-nav a *,.migration-menu a,.sqs-block-button-element,.sqs-block-button-element *,button,input[type=submit]):not(#x){font-family:itc-avant-garde-gothic-pro,pragmatica,sans-serif!important;text-transform:uppercase!important;letter-spacing:.06em!important}
 html body :is(.header-nav a,.header-nav a *):not(#x){font-weight:600!important;font-size:.82rem!important}
+/* Capitals are wider: keep button labels inside their boxes. */
+html body .sqs-block-button-element:not(#x){font-size:.9rem!important;line-height:1.3!important;padding:10px 16px!important;height:auto!important;min-height:56px!important;text-align:center!important;white-space:normal!important}
