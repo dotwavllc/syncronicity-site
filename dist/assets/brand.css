@@ -1,5 +1,6 @@
-/* SYNCRONICITY brand type (Brand Identity Reference): ITC Avant Garde Gothic everywhere,
-   600 for headings, 300 for body, 700 for emphasis and buttons. Served weights: 100/300/600/700. */
+/* SYNCRONICITY brand type (Brand Identity Reference): Area for body, headings, navigation and buttons;
+   Area Light Italic for the artist lineup; ITC Avant Garde Gothic for footer all-capitals lines.
+   The first block sets the base layout; the second sets the current type and overrides it. */
 body,body.homepage{
 --brand-font:itc-avant-garde-gothic-pro,pragmatica,"Helvetica Neue",Arial,sans-serif;
 --heading-font-font-family:var(--brand-font)!important;--heading-font-font-weight:600!important;--heading-font-letter-spacing:-.01em!important;
@@ -23,7 +24,7 @@ body .sqs-block-button-element,body button,body input[type=submit]{font-weight:7
 /* Phone: stop wrapped page titles colliding (Avant Garde descenders). */
 @media(max-width:767px){html body h1:not(#x),html body h1 *:not(#x){line-height:1.04!important}}
 
-/* ===== TRIAL: Area site-wide (not approved; do not merge as is) ===== */
+/* ===== Area type system (approved by AJ 2026-11-27) ===== */
 body,body.homepage{--brand-font:area-normal,"Helvetica Neue",Arial,sans-serif}
 html body :is(p,li):not(#x){font-weight:400!important;letter-spacing:.008em!important}
 html body :is(p,li) :is(strong,b):not(#x){font-weight:700!important}
