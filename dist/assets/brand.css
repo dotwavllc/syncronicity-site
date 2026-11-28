@@ -17,3 +17,6 @@ body .sqs-block-button-element,body button,body input[type=submit]{font-weight:7
 
 /* Header logo about 12% smaller than before on desktop and tablet (107px -> 94px) */
 @media (min-width:768px){body .header-title-logo a,body .header-title-logo img{max-height:94px!important}}
+
+/* Avant Garde is wider: keep long page titles from breaking mid-word on phones */
+@media (max-width:767px){body h1{font-size:min(13.5vw,72px)!important;overflow-wrap:normal!important;word-break:normal!important}}
