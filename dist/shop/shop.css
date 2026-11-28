@@ -266,3 +266,8 @@ main .hero h1{margin:16px 0 32px}
 .f-logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
 @media(max-width:767px){.footer-grid{grid-template-columns:minmax(calc(6vw - 11px),1fr) repeat(8,minmax(0,calc((1360px - 77px) / 8))) minmax(calc(6vw - 11px),1fr);grid-template-rows:repeat(11,minmax(24px,auto))}
 .f-contact{grid-area:2/5/7/10}.f-links{grid-area:2/2/7/4}.site-footer hr{grid-area:7/2/8/10}.f-logo{grid-area:8/2/11/10}}
+
+/* Product images on cards and in the product dialog */
+.art.has-image img{display:block;width:100%;height:100%;object-fit:cover}
+.modal-image{display:block;width:100%;height:auto;margin:0 0 20px}.modal-image[hidden]{display:none}
+@media(max-width:750px){main .card .art.has-image{height:auto !important}.art.has-image img{height:auto}}
