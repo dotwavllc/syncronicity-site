@@ -71,3 +71,7 @@
     gap: 8px;
   }
 }
+
+/* Studio: more room between the FAQ and the studio photos */
+section[data-section-id="68ee9f49c9e838032ab9223c"]{padding-bottom:96px !important}
+@media(max-width:767px){section[data-section-id="68ee9f49c9e838032ab9223c"]{padding-bottom:64px !important}}
