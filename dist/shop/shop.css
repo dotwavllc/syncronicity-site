@@ -304,10 +304,18 @@ html body :is(.filter,.button,.textlink,.card button):not(#x){font-size:.78rem!i
 html body main .shop-intro h2:not(#x),html body main .shop-intro h2:not(#x) *{font-family:dharma-gothic-c,"Arial Narrow",sans-serif!important;font-weight:800!important;text-transform:uppercase!important;letter-spacing:.01em!important}
 html body main .shop-intro h2:not(#x){font-size:clamp(52px,10vw,148px)!important;line-height:.94!important;white-space:nowrap}
 @media(max-width:767px){html body main .shop-intro h2:not(#x){font-size:min(19vw,80px)!important}}
-html body[data-variation] main .shop-intro .section-head:not(#x){display:block}
-html body[data-variation] main .shop-intro .section-head p:not(#x){margin-top:24px}
+@media(min-width:900px){html body[data-variation] main .shop-intro .section-head:not(#x){display:grid;grid-template-columns:max-content minmax(0,480px);justify-content:start;align-items:last baseline;column-gap:56px}html body[data-variation] main .shop-intro .section-head p:not(#x){margin:0}}
+@media(max-width:899px){html body[data-variation] main .shop-intro .section-head:not(#x){display:block}html body[data-variation] main .shop-intro .section-head p:not(#x){margin-top:24px}}
 /* Footer: smaller text; all-capitals lines in Avant Garde. */
 html body .site-footer p:not(#x){font-size:calc(var(--fs-normal) - 2.5px)!important}
 html body .site-footer .f-contact p:not(#x){font-size:calc(var(--fs-small) - 3.5px)!important}
 html body .site-footer p:has(> strong:only-child):not(#x),html body .site-footer p:has(> strong:only-child) strong:not(#x){font-family:itc-avant-garde-gothic-pro,"Century Gothic",sans-serif!important;font-weight:600!important;letter-spacing:.04em!important}
 @media(max-width:767px){html body .site-footer p:not(#x){font-size:calc(var(--fs-normal) - 1.5px)!important}html body .site-footer .f-contact p:not(#x){font-size:calc(var(--fs-small) - 2.5px)!important}}
+/* Bigger H1, bolder H2 (the shop headline keeps its own style). */
+@media(min-width:768px){html body main h1:not(#x):not(.modal *){font-size:clamp(32px,calc(3.6vw + 13px),64px)!important}}
+@media(max-width:767px){html body main h1:not(#x):not(.modal *){font-size:min(9vw,42px)!important}}
+html body :is(main h2,.modal h2,main h2 *):not(#x){font-weight:800!important}
+html body main .shop-intro :is(h2,h2 *):not(#x){font-weight:800!important}
+/* Header breathing room. */
+html body .site-header:not(#x){padding-top:calc(1.9vw + 12px);padding-bottom:calc(1.9vw + 12px)}
+@media(max-width:799px){html body .site-header:not(#x){padding-top:calc(min(6.5vw,32px) + 5px);padding-bottom:calc(min(6.5vw,32px) + 5px)}}
