@@ -289,7 +289,7 @@ body .button,body .filter,body .textlink,body .card button,body .eyebrow,body st
 /* Header logo about 12% smaller on desktop and tablet */
 @media(min-width:800px){.logo{flex-basis:494px}}
 
-/* ===== TRIAL: Area, Dharma Gothic for the shop headline (not approved; do not merge as is) ===== */
+/* ===== Area type system (approved for the draft shop 2026-11-27) ===== */
 :root,body{--sans:area-normal,"Helvetica Neue",Arial,sans-serif;--avant:area-normal,"Helvetica Neue",Arial,sans-serif}
 html body :is(p,li,summary):not(#x){font-weight:400!important;letter-spacing:.008em!important}
 html body :is(main h1,main h2,.modal h2,main h2 *,main h1 *):not(#x){font-weight:700!important;letter-spacing:-.035em!important}
@@ -300,7 +300,7 @@ html body main :is(h1,h2):not(#x) *{font-size:inherit!important;line-height:inhe
 html body :is(.site-nav a,.mobile-menu a,.filter,.button,.textlink,.card button,.eyebrow):not(#x){text-transform:uppercase!important;letter-spacing:.07em!important;font-weight:700!important}
 html body .site-nav a:not(#x){font-size:calc(.78rem + 1px)!important}
 html body :is(.filter,.button,.textlink,.card button):not(#x){font-size:.78rem!important}
-/* Special area: the shop headline, on one line. */
+/* Shop headline, on one line. Dharma Gothic is provisional: the shop signature font and accent are not decided. */
 html body main .shop-intro h2:not(#x),html body main .shop-intro h2:not(#x) *{font-family:dharma-gothic-c,"Arial Narrow",sans-serif!important;font-weight:800!important;text-transform:uppercase!important;letter-spacing:.01em!important}
 html body main .shop-intro h2:not(#x){font-size:clamp(52px,10vw,148px)!important;line-height:.94!important;white-space:nowrap}
 @media(max-width:767px){html body main .shop-intro h2:not(#x){font-size:min(19vw,80px)!important}}
