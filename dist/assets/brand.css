@@ -44,3 +44,7 @@ html body :is(h1,h2).hl-hero *:not(#x){font-size:inherit!important;line-height:i
 html body :is(p,li):not(#x){letter-spacing:.015em!important}
 /* Header navigation: lighter and wider. */
 html body :is(.header-nav a,.header-nav a *,.migration-menu a):not(#x){font-weight:300!important;letter-spacing:.13em!important}
+/* Line spacing for the light headlines; slightly smaller on phones so they stay clear of the header. */
+html body :is(h1,h2).hl-long:not(#x){line-height:1.16!important}
+html body :is(h1,h2).hl-long *:not(#x){line-height:inherit!important}
+@media(max-width:767px){html body :is(h1,h2).hl-long:not(#x){font-size:clamp(26px,8.2vw,34px)!important;line-height:1.2!important}html body :is(h1,h2).hl-long *:not(#x){font-size:inherit!important}}
