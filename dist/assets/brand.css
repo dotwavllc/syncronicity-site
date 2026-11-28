@@ -49,7 +49,7 @@ html body footer p:has(> strong:only-child):not(#x),html body footer p:has(> str
 /* Bolder H2. */
 html body :is(h2,h2 *):not(#x){font-weight:800!important}
 /* Artist lineup: thin italic. */
-html body .site-marquee .site-marquee-group span:not(#x){font-style:italic!important;font-weight:200!important;letter-spacing:.012em!important}
+html body .site-marquee .site-marquee-group span:not(#x){font-family:area-normal-light,"Helvetica Neue",Arial,sans-serif!important;font-style:italic!important;font-weight:200!important;letter-spacing:.012em!important}
 /* Header breathing room. */
 @media(min-width:768px){html body .header .header-announcement-bar-wrapper:not(#x){padding-top:calc(1.9vw + 12px)!important;padding-bottom:calc(1.9vw + 12px)!important}}
 @media(max-width:767px){html body .header .header-announcement-bar-wrapper:not(#x){padding-top:calc(6.5vw + 5px)!important;padding-bottom:calc(6.5vw + 5px)!important}}
