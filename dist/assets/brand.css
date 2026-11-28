@@ -22,14 +22,14 @@ body .sqs-block-button-element,body button,body input[type=submit]{font-weight:7
 @media (max-width:767px){body h1{font-size:min(13.5vw,72px)!important;overflow-wrap:normal!important;word-break:normal!important}}
 
 /* ===== TRIAL: Outfit in tandem with Avant Garde (not approved; do not merge as is) =====
-   Outfit: body, section and card headings. Avant Garde: page titles, navigation and button capitals. */
+   Outfit: page titles, headings, body, descriptions and details. Avant Garde: navigation and button capitals. */
 body,body.homepage{--brand-font:outfit,pragmatica,"Helvetica Neue",Arial,sans-serif}
 body p,body li{font-weight:300!important}
 html body :is(h2,h3,h4):not(#x){font-weight:500!important;letter-spacing:-.005em!important}
-html body :is(h1,h1 *):not(#x){font-family:itc-avant-garde-gothic-pro,pragmatica,sans-serif!important;font-weight:600!important}
+html body :is(h1,h1 *):not(#x){font-family:outfit,pragmatica,sans-serif!important;font-weight:600!important;letter-spacing:-.015em!important}
 html body :is(.header-nav a,.header-nav a *,.migration-menu a,.sqs-block-button-element,.sqs-block-button-element *,button,input[type=submit]):not(#x){font-family:itc-avant-garde-gothic-pro,pragmatica,sans-serif!important;text-transform:uppercase!important;letter-spacing:.06em!important}
 html body :is(.header-nav a,.header-nav a *):not(#x){font-weight:600!important;font-size:.82rem!important}
 /* Capitals are wider: keep button labels inside their boxes. */
 html body .sqs-block-button-element:not(#x){font-size:.9rem!important;line-height:1.3!important;padding:10px 16px!important;height:auto!important;min-height:56px!important;text-align:center!important;white-space:normal!important}
-/* Phone: stop wrapped page titles colliding (Avant Garde descenders). */
+/* Phone: stop wrapped page titles colliding. */
 @media(max-width:767px){html body h1:not(#x),html body h1 *:not(#x){line-height:1.04!important}}
