@@ -23,20 +23,26 @@ body .sqs-block-button-element,body button,body input[type=submit]{font-weight:7
 /* Phone: stop wrapped page titles colliding (Avant Garde descenders). */
 @media(max-width:767px){html body h1:not(#x),html body h1 *:not(#x){line-height:1.04!important}}
 
-/* ===== TRIAL: Area site-wide, Dharma Gothic for the artist lineup (not approved; do not merge as is) ===== */
+/* ===== TRIAL: Area site-wide (not approved; do not merge as is) ===== */
 body,body.homepage{--brand-font:area-normal,"Helvetica Neue",Arial,sans-serif}
 html body :is(p,li):not(#x){font-weight:400!important;letter-spacing:.008em!important}
 html body :is(p,li) :is(strong,b):not(#x){font-weight:700!important}
-html body :is(h1,h2,h1 *,h2 *):not(#x){font-weight:700!important;letter-spacing:-.015em!important}
-html body :is(h3,h4,h3 *,h4 *):not(#x),html body p.sqsrte-large:not(#x),html body p.sqsrte-large *:not(#x){font-weight:500!important;letter-spacing:-.005em!important}
+html body :is(h1,h2,h1 *,h2 *):not(#x){font-weight:700!important;letter-spacing:-.035em!important}
+html body :is(h3,h4,h3 *,h4 *):not(#x),html body p.sqsrte-large:not(#x),html body p.sqsrte-large *:not(#x){font-weight:500!important;letter-spacing:-.018em!important}
 /* Title sizes. The previous/next post links keep their own sizes. */
 html body h1:not(#x):not(.site-marquee *){font-size:clamp(42px,calc(4.9vw + 15px),92px)!important;line-height:1.04!important}
-html body h2:not(#x):not(.item-pagination-title){font-size:clamp(28px,calc(2.9vw + 11px),54px)!important;line-height:1.12!important}
+html body h2:not(#x):not(.item-pagination-title){font-size:clamp(30px,calc(3.2vw + 12px),58px)!important;line-height:1.12!important}
 html body h1:not(#x):not(.site-marquee *) *,html body h2:not(#x):not(.item-pagination-title) *{font-size:inherit!important;line-height:inherit!important}
-@media(max-width:767px){html body h1:not(#x):not(.site-marquee *){font-size:min(10.4vw,52px)!important;line-height:1.08!important}html body h2:not(#x):not(.item-pagination-title){font-size:min(7.4vw,34px)!important;line-height:1.16!important}}
+@media(max-width:767px){html body h1:not(#x):not(.site-marquee *){font-size:min(10.4vw,52px)!important;line-height:1.08!important}html body h2:not(#x):not(.item-pagination-title){font-size:min(7.8vw,36px)!important;line-height:1.16!important}}
 /* Capitals: navigation and buttons. */
 html body :is(.header-nav a,.header-nav a *,.migration-menu a,.sqs-block-button-element,.sqs-block-button-element *,button,input[type=submit]):not(#x){text-transform:uppercase!important;letter-spacing:.07em!important;font-weight:700!important}
-html body :is(.header-nav a,.header-nav a *):not(#x){font-size:.78rem!important}
+html body :is(.header-nav a,.header-nav a *):not(#x){font-size:calc(.78rem + 1px)!important}
 html body .sqs-block-button-element:not(#x){font-size:.85rem!important;line-height:1.3!important;padding:10px 16px!important;height:auto!important;min-height:56px!important;text-align:center!important;white-space:normal!important}
-/* Special area: the scrolling artist lineup in condensed Dharma Gothic. */
-html body .site-marquee .site-marquee-group span:not(#x){font-family:dharma-gothic-c,"Arial Narrow",sans-serif!important;font-weight:800!important;text-transform:uppercase!important;letter-spacing:.02em!important;font-size:clamp(38px,3.8vw,58px)!important;line-height:1.15!important}
+/* Body copy: main section text 2px smaller, regular body 1px smaller. */
+html body #page p.sqsrte-small:not(#x){font-size:calc(min(calc((var(--small-text-size-value) - 1) * 1.2vw + 1rem), max(calc((var(--small-text-size-value) - 1) * 0.012 * var(--maxPageWidth) + 1rem), calc(var(--small-text-size-value) * 1rem))) - 2px)!important}
+html body #page .sqs-html-content p:not([class*=sqsrte-]):not(#x){font-size:calc(1em - 1px)!important}
+/* Footer: smaller text; all-capitals lines in Avant Garde. */
+html body footer p.sqsrte-small:not(#x){font-size:calc(min(calc((var(--small-text-size-value) - 1) * 1.2vw + 1rem), max(calc((var(--small-text-size-value) - 1) * 0.012 * var(--maxPageWidth) + 1rem), calc(var(--small-text-size-value) * 1rem))) - 3.5px)!important}
+html body footer .sqs-html-content p:not([class*=sqsrte-]):not(#x){font-size:calc(1em - 2.5px)!important}
+html body footer p:has(> strong:only-child):not(#x),html body footer p:has(> strong:only-child) strong:not(#x){font-family:itc-avant-garde-gothic-pro,"Century Gothic",sans-serif!important;font-weight:600!important;letter-spacing:.04em!important}
+@media(max-width:767px) and (orientation:portrait){html body #page p.sqsrte-small:not(#x){font-size:calc(calc((var(--small-text-size-value) - 1) * calc(.012 * min(100vh, 900px)) + 1rem) - 2px)!important}html body footer p.sqsrte-small:not(#x){font-size:calc(calc((var(--small-text-size-value) - 1) * calc(.012 * min(100vh, 900px)) + 1rem) - 2.5px)!important}html body footer .sqs-html-content p:not([class*=sqsrte-]):not(#x){font-size:calc(1em - 1.5px)!important}}
