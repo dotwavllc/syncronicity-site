@@ -292,7 +292,7 @@ body .button,body .filter,body .textlink,body .card button,body .eyebrow,body st
 /* ===== TRIAL: Outfit in tandem with Avant Garde (not approved; do not merge as is) ===== */
 :root,body{--sans:outfit,pragmatica,"Helvetica Neue",Arial,sans-serif;--avant:itc-avant-garde-gothic-pro,pragmatica,sans-serif}
 html body :is(main h2,main h3,.modal h2,.art strong):not(#x){font-weight:500!important;letter-spacing:-.005em!important}
-html body :is(.shop-intro h2,.shop-intro h2 *,.hero h1,.hero h1 *):not(#x){font-family:var(--avant)!important;font-weight:600!important;letter-spacing:-.015em!important}
-html body :is(.site-nav a,.mobile-menu a,.filter,.button,.textlink,.card button,.eyebrow,.card-meta,.card-meta span):not(#x){font-family:var(--avant)!important;text-transform:uppercase!important;letter-spacing:.06em!important}
+html body :is(.shop-intro h2,.shop-intro h2 *,.hero h1,.hero h1 *):not(#x){font-family:var(--sans)!important;font-weight:600!important;letter-spacing:-.015em!important}
+html body :is(.site-nav a,.mobile-menu a,.filter,.button,.textlink,.card button,.eyebrow):not(#x){font-family:var(--avant)!important;text-transform:uppercase!important;letter-spacing:.06em!important}
 html body .site-nav a:not(#x){font-weight:600!important;font-size:.82rem!important}
 html body :is(.filter,.button,.textlink,.card button):not(#x){font-size:.82rem!important}
