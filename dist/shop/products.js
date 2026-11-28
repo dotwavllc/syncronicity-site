@@ -1,4 +1,5 @@
 // Shop catalog: one object per product. type: template | asset | app | bundle. art: core | rack | app | bundle.
+// Optional image (public URL) and imageAlt replace the placeholder art.
 const products = [
   {
     "name": "Set Architect",
@@ -8,6 +9,8 @@ const products = [
     "availability": "First release planned — not yet available",
     "description": "Set Architect is a set-planning app for building Ableton Live sets from a session template and song stems, with routing review, stem matching and build preparation.",
     "art": "app",
+    "image": "https://pub-d5ed5e2b96684f8ca98bd9817f6707dc.r2.dev/products/set-architect/sa-promo/sa-1x1-untitledconfigurationstemmapping.png",
+    "imageAlt": "Set Architect auto stem mapping screen with stem channels selected",
     "format": "Independent app",
     "compat": "Supported operating-system and Ableton Live versions to be confirmed.",
     "included": "Start from a template, existing ALS or saved working file; review routing and matching; import song stems; check song metadata; choose build options; build and verify the resulting ALS.",
