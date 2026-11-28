@@ -296,3 +296,10 @@ html body :is(.shop-intro h2,.shop-intro h2 *,.hero h1,.hero h1 *):not(#x){font-
 html body :is(.site-nav a,.mobile-menu a,.filter,.button,.textlink,.card button,.eyebrow):not(#x){font-family:var(--avant)!important;text-transform:uppercase!important;letter-spacing:.06em!important}
 html body .site-nav a:not(#x){font-weight:600!important;font-size:.82rem!important}
 html body :is(.filter,.button,.textlink,.card button):not(#x){font-size:.82rem!important}
+
+/* Longer headlines: light Avant Garde, a little open. Short titles stay in Outfit. */
+html body main h2.hl-long:not(#x),html body main h2.hl-long *:not(#x){font-family:var(--avant)!important;font-weight:300!important;letter-spacing:.015em!important;line-height:1.14!important}
+/* Slightly open body copy. */
+html body :is(p,li,details):not(#x){letter-spacing:.015em!important}
+/* Header navigation: lighter and wider. */
+html body :is(.site-nav,.mobile-menu) a:not(#x){font-weight:300!important;letter-spacing:.13em!important}
