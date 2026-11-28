@@ -276,3 +276,15 @@ main .hero h1{margin:16px 0 32px}
 main .card p,main .card button,main details p,body .modal p{font-size:calc(var(--fs-normal) - 2px)}
 .modal{max-width:868px}
 .modal-image{max-height:52vh;object-fit:contain}
+
+/* Brand type: ITC Avant Garde Gothic everywhere (600 headings, 300 body, 700 buttons) */
+:root,body{--sans:itc-avant-garde-gothic-pro,pragmatica,"Helvetica Neue",Arial,sans-serif;--head:var(--sans);--ui:var(--sans)}
+body *:not(svg):not(svg *){font-family:var(--sans)!important}
+body{font-weight:300}
+body p,body li,body summary,body .site-nav a,body .mobile-menu a{font-weight:300!important;letter-spacing:0!important}
+body main h1,body main h2,body main h3,body .modal h2,body .art strong{font-weight:600!important;letter-spacing:-.01em!important}
+body main h1{letter-spacing:-.015em!important}
+body .button,body .filter,body .textlink,body .card button,body .eyebrow,body strong,body #modalprice{font-weight:700!important;letter-spacing:0!important}
+
+/* Header logo about 12% smaller on desktop and tablet */
+@media(min-width:800px){.logo{flex-basis:494px}}
